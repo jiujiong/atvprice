@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATV外贸网站系统 v1.0 - PHP+MySQL</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #0a1628 0%, #0d1b2a 40%, #1d3557 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            padding: 20px;
+        }
+        .container { max-width: 720px; width: 100%; }
+        .logo {
+            width: 80px; height: 80px;
+            background: linear-gradient(135deg, #e63946, #c1121f);
+            border-radius: 20px;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 28px;
+            font-size: 40px; font-weight: 700;
+            box-shadow: 0 10px 40px rgba(230, 57, 70, 0.3);
+        }
+        h1 { font-size: 36px; text-align: center; margin-bottom: 10px; font-weight: 700; }
+        .subtitle { color: rgba(255,255,255,0.6); text-align: center; font-size: 16px; margin-bottom: 40px; }
+        .warning {
+            background: rgba(255, 193, 7, 0.1); border: 1px solid rgba(255, 193, 7, 0.3);
+            border-radius: 12px; padding: 16px 20px; margin-bottom: 28px;
+            font-size: 14px; color: #ffc107; text-align: center;
+        }
+        .card {
+            background: rgba(255,255,255,0.04); backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.08); border-radius: 16px;
+            padding: 28px; margin-bottom: 20px;
+        }
+        .card h3 { font-size: 17px; margin-bottom: 16px; color: #e63946; }
+        .card p, .card li { color: rgba(255,255,255,0.78); font-size: 14px; line-height: 1.8; }
+        .card ul { margin-left: 18px; }
+        .card li { margin-bottom: 6px; }
+        code { background: rgba(255,255,255,0.1); padding: 3px 10px; border-radius: 6px; font-size: 13px; }
+        .btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 14px 32px; background: linear-gradient(135deg, #e63946, #c1121f);
+            color: white; text-decoration: none; border-radius: 10px;
+            font-weight: 600; font-size: 15px; margin-top: 8px;
+            box-shadow: 0 8px 30px rgba(230, 57, 70, 0.25);
+        }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 16px; }
+        .feature {
+            background: rgba(255,255,255,0.04); border-radius: 12px;
+            padding: 22px 16px; text-align: center; border: 1px solid rgba(255,255,255,0.06);
+        }
+        .feature-icon { font-size: 30px; margin-bottom: 10px; }
+        .feature h4 { font-size: 14px; margin-bottom: 4px; color: white; }
+        .feature p { font-size: 12px; color: rgba(255,255,255,0.5); }
+        .footer { margin-top: 32px; font-size: 13px; color: rgba(255,255,255,0.4); text-align: center; }
+        ol { margin-left: 20px; }
+        ol li { margin-bottom: 8px; color: rgba(255,255,255,0.75); font-size: 14px; }
+        @media (max-width: 600px) {
+            .grid { grid-template-columns: 1fr; }
+            h1 { font-size: 26px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">A</div>
+        <h1>ATV外贸网站系统</h1>
+        <p class="subtitle">基于 PHP + MySQL 的专业外贸企业网站管理系统 v1.0</p>
+
+        <div class="warning">
+            &#9888; 本系统需要 PHP + MySQL 运行环境。当前为静态预览模式，完整功能需要部署到 PHP 服务器。
+        </div>
+
+        <div class="card">
+            <h3>&#128295; 修复记录</h3>
+            <ul>
+                <li>修复了 config.php 中 table() 函数重复定义导致的致命错误</li>
+                <li>修复了 install.php 生成的配置文件缺少 table() 函数的问题</li>
+                <li>优化了前台全屏自适应布局和视觉效果</li>
+                <li>所有PHP文件已通过语法检查</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>&#128640; 安装步骤</h3>
+            <ol>
+                <li>将 <code>/mnt/agents/output/atv_website/</code> 下所有文件上传到PHP服务器</li>
+                <li>在MySQL中创建一个空数据库</li>
+                <li>浏览器访问 <code>http://您的域名/install.php</code></li>
+                <li>填写数据库信息，设置管理员账号，完成安装</li>
+                <li>安装完成后删除 install.php，登录后台 <code>/admin/</code></li>
+            </ol>
+        </div>
+
+        <div class="card">
+            <h3>&#11088; 系统功能</h3>
+            <div class="grid">
+                <div class="feature">
+                    <div class="feature-icon">&#127949;</div>
+                    <h4>商品管理</h4>
+                    <p>增删改查+富文本+多图</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">&#128240;</div>
+                    <h4>新闻管理</h4>
+                    <p>文章发布编辑</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">&#128232;</div>
+                    <h4>询盘管理</h4>
+                    <p>客户留言收集</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">&#128269;</div>
+                    <h4>SEO优化</h4>
+                    <p>每页独立关键词</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            ATV外贸网站系统 v1.0 | 前台英文 | 后台中文 | PHP + MySQL
+        </div>
+    </div>
+</body>
+</html>
