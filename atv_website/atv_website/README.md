@@ -1,115 +1,128 @@
-# ATV外贸企业网站系统
-
-## 简介
-专业的ATV（全地形车）外贸企业网站管理系统，基于PHP+MySQL开发，适合ATV、UTV、卡丁车、越野车等powersports产品的外贸展示。
-
-## 功能特性
-
-### 前台功能（英文）
-- 🏠 美观大气的首页 - Hero区域、产品展示、公司介绍、新闻动态
-- 🏍️ 商品列表页 - 分类筛选、分页展示
-- 📄 商品详情页 - 图片画廊、规格参数、富文本详情、相关产品推荐
-- 📰 新闻列表页 - 文章列表、分页
-- 📄 新闻详情页 - 正文、分享按钮、侧边栏推荐
-- 📞 关于我们 / 联系我们页面
-- 📨 在线询盘表单
-- 🔍 SEO优化 - 每页独立的标题、关键词、描述
-
-### 后台功能（中文）
-- 🔐 安全登录系统
-- 📊 仪表盘 - 数据统计概览
-- 🏍️ 商品管理 - 增删改查、富文本编辑、多图上传、规格参数
-- 📰 新闻管理 - 增删改查、富文本编辑
-- 📨 询盘管理 - 查看、标记已读、删除
-- 🔍 SEO设置 - 各页面独立设置Meta信息
-- ⚙️ 网站设置 - 公司信息、联系方式、统计代码
-
-## 系统要求
-- PHP 7.4+ (推荐 PHP 8.0+)
-- MySQL 5.7+ 或 MariaDB 10.3+
-- Apache/Nginx 服务器
-- mod_rewrite 支持（Apache）
-
-## 安装步骤
-
-1. **上传文件**
-   将网站文件上传到服务器根目录或子目录
-
-2. **创建数据库**
-   在MySQL中创建一个新数据库（如 `atv_website`）
-
-3. **运行安装程序**
-   访问 `http://your-domain.com/install.php`
-   - 填写数据库连接信息
-   - 创建数据表
-   - 设置管理员账号
-
-4. **完成安装**
-   安装完成后会自动创建 `config.php` 配置文件
-   - 后台地址: `http://your-domain.com/admin/`
-   - 使用安装时设置的管理员账号登录
-
-5. **安全提示**
-   - 安装完成后建议删除 `install.php` 文件
-   - 修改后台目录名可增强安全性（需同步修改配置）
-
-## 目录结构
-```
+ATV Foreign Trade Enterprise Website System
+Introduction
+A professional ATV (All-Terrain Vehicle) foreign trade enterprise website management system developed based on PHP+MySQL. It is suitable for foreign trade display of powersports products including ATVs, UTVs, go-karts and off-road vehicles.
+Functional Features
+Frontend Functions (English)
+🏠 Elegant Homepage - Hero banner section, product display, company profile, latest news
+🏍️ Product List Page - Category filtering and pagination display
+📄 Product Detail Page - Image gallery, specifications, rich-text descriptions and related product recommendations
+📰 News List Page - Article listing with pagination
+📄 News Detail Page - Full content, share buttons and sidebar recommended articles
+📞 About Us / Contact Us Pages
+📨 Online Inquiry Form
+🔍 SEO Optimization - Independent page titles, keywords and descriptions for each page
+Backend Functions (Chinese)
+🔐 Secure system login
+📊 Dashboard - Core data overview
+🏍️ Product Management - Full CRUD operations, rich-text editing, multi-image upload and parameter configuration
+📰 News Management - Full CRUD operations and rich-text editing
+📨 Inquiry Management - View, mark as read and delete inquiries
+🔍 SEO Settings - Independent Meta information configuration for all pages
+⚙️ Website Settings - Company information, contact details and statistical code embedding
+System Requirements
+PHP 7.4+ (PHP 8.0+ recommended)
+MySQL 5.7+ or MariaDB 10.3+
+Apache / Nginx Web Server
+mod_rewrite module enabled (for Apache)
+Installation Guide
+Upload Files
+Upload all website files to the root directory or subdirectory of your server.
+Create Database
+Create a new MySQL database (e.g. atv_website).
+Run Installation Wizard
+Visit shturl.cc/DxA4XNHSLlgBZsiYQBrKM4a6
+Fill in database connection credentials
+Automatically generate data tables
+Set up administrator account
+Complete Installation
+The system will automatically generate the config.php configuration file after installation.
+Backend Access URL: shturl.cc/XQGVlpOJz7ZrSMjuveh
+Log in with the administrator account created during installation
+Security Tips
+Delete install.php after successful installation
+Rename the admin directory to enhance website security (update relevant configurations synchronously)
+Directory Structure
+plaintext
 atv_website/
-├── install.php          # 安装程序
-├── config.php           # 配置文件（安装后生成）
-├── .htaccess           # URL重写和SEO优化
-├── index.php           # 首页
-├── products.php        # 商品列表
-├── product.php         # 商品详情
-├── news.php            # 新闻列表
-├── news_detail.php     # 新闻详情
-├── about.php           # 关于我们
-├── contact.php         # 联系我们
-├── includes/           # 核心文件
-│   ├── functions.php   # 公共函数
-│   ├── header.php      # 前台头部
-│   └── footer.php      # 前台底部
-├── admin/              # 后台管理
-│   ├── login.php       # 登录页
-│   ├── index.php       # 仪表盘
-│   ├── products.php    # 商品管理
-│   ├── product_edit.php # 商品编辑
-│   ├── news.php        # 新闻管理
-│   ├── news_edit.php   # 新闻编辑
-│   ├── inquiries.php   # 询盘管理
-│   ├── seo.php         # SEO设置
-│   ├── settings.php    # 网站设置
-│   ├── header.php      # 后台头部
-│   └── footer.php      # 后台底部
-├── assets/             # 静态资源
-│   ├── css/style.css   # 主样式表
-│   └── js/main.js      # 主脚本
-└── uploads/            # 上传目录
-    ├── products/       # 商品图片
-    └── news/           # 新闻图片
-```
+├── install.php          # Installation script
+├── config.php           # Configuration file (generated after installation)
+├── .htaccess            # URL rewrite & SEO optimization rules
+├── index.php            # Homepage
+├── products.php         # Product list page
+├── product.php          # Product detail page
+├── news.php             # News list page
+├── news_detail.php      # News detail page
+├── about.php            # About Us page
+├── contact.php          # Contact Us page
+├── includes/            # Core functional files
+│   ├── functions.php    # Common public functions
+│   ├── header.php       # Frontend page header
+│   └── footer.php       # Frontend page footer
+├── admin/               # Backend management module
+│   ├── login.php        # Admin login page
+│   ├── index.php        # Admin dashboard
+│   ├── products.php     # Product management
+│   ├── product_edit.php # Product editing page
+│   ├── news.php         # News management
+│   ├── news_edit.php    # News editing page
+│   ├── inquiries.php    # Inquiry management
+│   ├── seo.php          # SEO configuration
+│   ├── settings.php     # Global website settings
+│   ├── header.php       # Backend public header
+│   └── footer.php       # Backend public footer
+├── assets/              # Static resource files
+│   ├── css/style.css    # Main stylesheet
+│   └── js/main.js       # Core frontend script
+└── uploads/             # File upload directory
+    ├── products/        # Product image storage
+    └── news/            # News image storage
+SEO Advantages
+Independent Meta Title / Keywords / Description for every single page
+Semantic HTML5 structure
+Schema.org structured data support
+Open Graph social sharing tags
+Friendly pseudo-static URL support
+Image lazy loading function
+Gzip compression and browser cache optimization
+Technical Specifications
+System Version: 1.0.0
+Core Language: PHP + MySQL
+Frontend Technology: HTML5 + CSS3 + Vanilla JavaScript
+No requirements for Node.js, Webpack or Composer
+Traditional server-side rendering, highly friendly for search engine indexing
+Security Mechanisms
+User passwords encrypted via password_hash algorithm
+PDO prepared statements to prevent SQL injection
+Standard XSS output escaping
+Basic CSRF protection mechanism
+Secure HTTP response headers configuration
+Directory browsing access restriction
 
-## SEO特性
-- 每页可独立设置 Meta Title / Keywords / Description
-- 语义化HTML5标签
-- Schema.org 结构化数据
-- Open Graph 社交分享标签
-- URL伪静态支持
-- 图片懒加载
-- Gzip压缩和浏览器缓存
+ain Products:
+‪ATV‬ , ‪Go-Kart‬ , ‪Farm ATV‬ , ‪ATV Acc‬
+Address:
+No. 12, Keyuan 5th Street, Changcheng Village, Dongcheng Subdistrict, Yongkang City, Jinhua, Zhejiang Province, China, 1st Floor
+Main Markets:
+South America, Southeast Asia, Africa, Oceania, Mid East, Eastern Asia
+International Commercial Terms(Incoterms):
+FOB, EXW, DDP
+Terms of Payment:
+T/T
+Average Lead Time:
+Peak Season Lead Time: 1-3 months
+Off Season Lead Time: one month
+BV Audit Report No. :	
+MIC-ASI2532002
+Verify Now
+|
+Read Free Report
+Average Response Time:≤8.78h
+Yongkang Modou Vehicle Co., Ltd.: Your ATV and go kart business partner
 
-## 技术支持
-- 系统版本: 1.0.0
-- 开发语言: PHP + MySQL
-- 前端: HTML5 + CSS3 + JavaScript (原生)
-- 无需Node.js、无需Webpack、无需Composer
-- 传统服务器端渲染，利于搜索引擎收录
+For 17 years, Yongkang Modou Vehicle Co., Ltd. Has been dedicated to the design, development, production, and sales of agricultural vehicles, atvs, go karts, and other products.
 
-## 安全特性
-- 密码使用 password_hash 加密
-- PDO预处理语句防止SQL注入
-- XSS输出转义
-- CSRF防护基础
-- 安全响应头
-- 目录禁止浏览
+We can provide OEM and ODM services for our customers. The company has the ability to design and develop, and can turn customers' dreams into reality.
+
+Our state-of-the-art manufacturing factory has a seamless production line, from carefully procuring raw materials, precision mold manufacturing, and expert frame welding, to perfect painting, meticulous assembly, and rigorous testing. This end-to-end process ensures that every vehicle taken offline is of the highest quality and meets strict international safety and performance standards.
+
+At YONGKANG MODOU VEHICLE Co., Ltd., we are not just selling products; We are engaged in realizing our dreams. MD: Achieve Your Dreams "is not only a catchy slogan, but also a philosophy that permeates all aspects of our operations. We strive to establish long-term mutually beneficial relationships with our clients. Every satisfied customer is not just a one-time buyer, but a returning customer, a loyal supporter, and most importantly, a friend. We are committed to continuous improvement and innovation. We firmly focus on quality, attention to detail, and customer satisfaction. We look forward to your joining the YONGKANG MODOU VEHICLE Co., Ltd family and embarking on a journey of success together.
